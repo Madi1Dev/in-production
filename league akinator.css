@@ -1,0 +1,82 @@
+*, *::before, *,*::after {
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+:root {
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+
+    /* in this app, there are no right and wrong answers. But Akinator can be wrong. So, maybe use the wrong colours with an animation? */
+}
+
+body {
+    --hue: var(--hue-neutral);
+    padding: 0; 
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: hsl(var(--hue-neutral), 100%, 20%);*/
+    background: rgba(0, 0, 0, 0.6) url("https://lolstatic-a.akamaihd.net/frontpage/apps/prod/rg-league-display-2017/pt_BR/cb24025fade09e3f965776440dffcc65024d3266/assets/img/content/splash/content-original-championillustrations-group-slashes.jpg");
+    background-blend-mode: darken;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.question_container {
+    width: 500px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.image_container {
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.button_grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+button, .start_button {
+    font-size: 25px;
+    background-color: hsl(var(--hue), 100%, 50%);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.button:hover,
+.start_button:hover,
+.end_button:hover {
+    border-color: black;
+    transform:scale(1.1);
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.game_starts {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+

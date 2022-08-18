@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="league akinator.css" rel="stylesheet">
+    <title>league akinator</title>
+    <script defer src="league akinator.js"></script>
+</head>
+<body>
+
+
+<section id="akinator" class="hide">
+<div class="container" id="container" class="hide"> <!-- problem with classes. Put them in the same "" no need for section.-->
+    <div class="image_container">
+        <img src="https://preview.redd.it/at6ebbz7ous41.png?auto=webp&s=c0800fff309e98dfd5b1ec7e2c1cfab80cf63042">
+    </div>
+    <div id="question_container" class="question_container">
+        <p id="question">Jhin asks:</p>
+    </div>
+
+    <div id="answer_buttons" class="button_grid">
+        <button class="button" id="answer_yes">Yes</button>
+        <button class="button" id="answer_no">No</button>
+    </div>
+
+    <div class="game_ends" id="game_ends">
+        <button id="end_button" class="end_button">Play again?</button>
+    </div>
+    
+</div>
+
+</section>
+
+<div class="game_starts" id="game_starts">
+    <button id="start_button" class="start_button">Start</button> 
+    <!-- this button should disappear until end of game. When Jhin asks if you want to play again, I think the yes button is enough -->
+</div>
+
+<!-- when you add classes, they should be in the same tag. Not class = x2. Once, in the same ""-->
+
+<!-- <section class="akinator" id="akinator"> -->
+
+
+
+
+</body>
+</html>
