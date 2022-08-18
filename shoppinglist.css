@@ -1,0 +1,188 @@
+* {
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopping_list_section {
+    background-color: azure;
+    width: 33.5vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.shopping_box {
+    width: 40rem;
+    height: 40rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.shopping_button {
+    display: flex;
+    justify-content: center;
+    width: 40rem;
+    height: 3rem;
+}
+
+.add_product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: beige;
+}
+
+.add_product:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+.label_product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    font-size: 25px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: beige;
+}
+
+
+.product {
+    width: 23rem;
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+} /* do a repeating gradient  from skyline for background */
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
+    font-size: 25px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 40px;
+}
+
+header {
+    background: repeating-linear-gradient(
+        90deg,
+        var(purple) 0%,
+        var(purple) 10%,
+        transparent 10%,
+        transparent 15%
+      ),
+      repeating-linear-gradient(
+        var(orange) 0%,
+        var(orange) 10%,
+        var(pink) 10%,
+        var(pink) 90%
+      )
+}
+
+
+.delete_button {
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+}
+
+.delete_button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.healthy_plus {
+    width: 20rem;
+    height: 20rem;
+    position: relative;
+    left: 3vw;
+    background-image: url('https://freesvg.org/img/primary-tab-new.png');
+    background-size: 320px;
+}
+
+.unhealthy_minus {
+    width: 20rem;
+    height: 20rem;
+    position: relative;
+    right: 3vw;
+    background-image: url('https://www.pngkey.com/png/detail/663-6631987_red-minus-icon-clipart-computer-icons-plus-and.png');
+    background-size: 320px;
+}
+
+/* rather than an image, this is better done by creating an actual image with CSS */
+
+.hide {
+    display: none;
+}
+
+.test {
+    width: 20rem;
+    height: 20rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 3vw;
+}
+
+.animated_cross {
+    width: 15rem;
+    height: 15rem;
+    opacity: 0;
+    transition: opacity 230ms ease-in-out;
+}
+
+.animated_cross:hover{
+    opacity: 1;
+}
+
+.cross {
+    height: 25vh;
+    width: 3vw;
+    background: green;
+    position: relative;
+
+}
+
+.cross::after{
+    content: "";
+    position: absolute;
+    height: 25vh;
+    width: 3vw;
+    background: green;
+    rotate: 90deg;
+    
+}
