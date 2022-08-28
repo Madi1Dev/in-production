@@ -9,16 +9,25 @@
     <title>shopping list</title>
 </head>
 <body>
-    
+
+    <div id="healthy_list" class="healthy_list">  
+        <h2>Healthy Foods</h2>
+        <div id="healthy_foods_array" class="healthy_foods_array"></div>
+    </div>
+
     <main>
 
-        <div id="unhealthy_minus" class="unhealthy_minus hide">
-        </div>
+        <header class="welcome" id="welcome">
+            <h2>Time to organise your shopping list! Feel free to add the items you buy often to the lists next to the cart
+                so that you can add them quickly the next time you shop.
+            </h2>
+        </header>
 
         <section id="shopping_list_section" class="shopping_list_section">
 
             <header>
                 <h1>Shopping List</h1>
+                <hr>
             </header>
 
             <div id="shopping_box" class="shopping_box">
@@ -27,23 +36,29 @@
             <div id="shopping_button" class="shopping_button">
 
                 <label for="product" class="label_product">Product:</label>
-                <input type="text" id="product" name="product" class="product">
+                <input type="text" id="product" name="product" class="product" pattern="([^\s][A-zÀ-ž\s]+)">
                 <button type="button" id="add_product" name="add_product" class="add_product">Add</button>
                 
             </div>
 
-        </section>
-
-        <div id="healthy_plus" class="healthy_plus hide">
-        </div>
-
-        <div id="test" class="test">
-            <div class="cross">
-            </div>
-        </div>
+        </section>  
 
     </main>
 
+    <div id="treats_list" class="treats_list">
+        <h2>Treats!</h2>
+        <div id="treats_array" class="treats_array"></div>
+    </div>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+

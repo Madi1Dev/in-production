@@ -1,5 +1,5 @@
 * {
-    border: 1px solid black;
+    
     box-sizing: border-box;
 }
 
@@ -8,34 +8,54 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    width: 100vw;
+    width: auto;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: antiquewhite;
+    background-image: url(https://img.freepik.com/free-vector/peach-background-vector-cute-desktop-wallpaper_53876-136871.jpg?w=2000);
+    backdrop-filter: blur(0.5px);
 }
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    width: 40vw;
+    height: auto;
+    
+}
+
+.welcome {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+header > hr {
+    width: 15rem;
+    height: 2px;
+    border-radius: 5px;
 }
 
 .shopping_list_section {
-    background-color: azure;
+    background-color: #FFC0CB;
     width: 33.5vw;
-    height: 60vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-
 .shopping_box {
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    align-items: center;
     width: 40rem;
-    height: 40rem;
+    height: auto;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -43,8 +63,8 @@ main {
 .shopping_button {
     display: flex;
     justify-content: center;
-    width: 40rem;
-    height: 3rem;
+    width: auto;
+    height: auto;
 }
 
 .add_product {
@@ -83,8 +103,38 @@ main {
 li {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; 
     height: 3rem;
+    width: 40rem;
+    font-size: 25px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.div1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    left: 3rem;
+    height: auto;
+    width: auto;
+    font-size: 25px;
+    color: white;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    
+    border-radius: 10px 10px 10px 10px;
+    padding: 5px;
+    
+}
+
+.div2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: auto;
+    width: auto;
     font-size: 25px;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
@@ -92,7 +142,9 @@ li {
 
 h1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 40px;
+    font-size: 50px;
+    color: white;
+    margin: 5px;
 }
 
 header {
@@ -113,76 +165,300 @@ header {
 
 
 .delete_button {
-    display: flex;
     justify-content: flex-end;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 17px;
+    transition: 0.1s ease-in-out;
 }
 
-.delete_button:hover{
+.add_one_more_button {
+    justify-content: flex-end;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+    transition: 0.1s ease-in-out;
+}
+
+.remove_one_button {
+    justify-content: flex-end;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+    border-radius: 0px 10px 10px 0px;
+    transition: 0.1s ease-in-out;
+}
+
+.add_to_list_button {
+    justify-content: flex-end;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+    border-radius: 10px 0px 0px 10px;
+    transition: 0.1s ease-in-out;
+}
+
+.delete_button:hover,
+.remove_one_button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: red;
+}
+.add_one_more_button:hover,
+.add_to_list_button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: greenyellow;
+}
+
+.counter {
+    position: absolute;
+    z-index: 10;
+    right: 65vw;
+    transition: 0.1s ease-in-out;
+}
+
+.opacity {
+    opacity: 0;
+}
+
+/* SECOND SECTION */
+
+
+
+
+
+/* healthy list */
+
+.healthy_list {
+    display: flex;
+    flex-direction: column;
+    background-color: #ff71eb;
+    width: 18rem;
+    height: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.healthy_list h2 {
+    background-color: #62c34c;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.healthy_label {
+    display: flex;
+    width: auto;
+    height: 3rem;
+    font-size: 23px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 5px;
+    background-color: paleturquoise;
+    border-radius: 10px 0 10px 0;
+}
+
+.healthy_foods_array {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: auto;
+    width: 18rem;
+}
+
+.prompt_Healthy_Button_Add_To_List {
+    background-color: greenyellow;
+    width: 7rem;
+    height: 3rem;
+    border-radius: 25px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.prompt_Healthy_Button_Remove_From_Array {
+    background-color: #FBCEB1;
+    width: 7rem;
+    height: 3rem;
+    border-radius: 25px;
+    font-size: 22px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.text_Inside_Healthy_Prompt_Box {
+    font-size: 21px;
+    margin-bottom: -5px;
+    margin-top: -5px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.promptHealthyButton {
+    background-color: greenyellow;
+    width: 7rem;
+    height: 3rem;
+    border-radius: 25px;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* treats list */
+
+.treats_list {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFC0CB;
+    width: 18rem;
+    height: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.treats_list h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #FF69B4;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.treats_label {
+    display: flex;
+    width: auto;
+    height: 3rem;
+    font-size: 23px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 5px;
+    background-color: burlywood;
+    border-radius: 10px 0 10px 0;
+}
+
+.treats_array {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: auto;
+    width: 18rem;
+}
+
+.prompt_Treats_Button_Add_To_List {
+    background-color: greenyellow;
+    width: 7rem;
+    height: 3rem;
+    border-radius: 25px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.prompt_Treats_Button_Remove_From_Array {
+    background-color: pink;
+    width: 7rem;
+    height: 3rem;
+    border-radius: 25px;
+    font-size: 22px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.text_Inside_Treats_Prompt_Box {
+    font-size: 21px;
+    margin-bottom: -5px;
+    margin-top: -5px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.promptUnhealthyButton {
+    background-color: pink;
+    width: 7rem;
+    height: 3rem;
+    border-radius: 25px;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.treats_label:hover,
+.healthy_label:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
 
-.healthy_plus {
-    width: 20rem;
-    height: 20rem;
-    position: relative;
-    left: 3vw;
-    background-image: url('https://freesvg.org/img/primary-tab-new.png');
-    background-size: 320px;
+
+/* prompt box */
+.prompt_box {
+    background-color: whitesmoke;
+    width: 16rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 10;
+    position: absolute;
+    border-radius: 15px;
 }
 
-.unhealthy_minus {
-    width: 20rem;
-    height: 20rem;
-    position: relative;
-    right: 3vw;
-    background-image: url('https://www.pngkey.com/png/detail/663-6631987_red-minus-icon-clipart-computer-icons-plus-and.png');
-    background-size: 320px;
+.text_inside_prompt_box {
+    font-size: 22px;
+    margin-bottom: -5px;
+    margin-top: -5px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 
-/* rather than an image, this is better done by creating an actual image with CSS */
+.promptUnhealthyButton:hover,
+.promptHealthyButton:hover, 
+.prompt_Healthy_Button_Add_To_List:hover, 
+.prompt_Healthy_Button_Remove_From_Array:hover, 
+.prompt_Treats_Button_Add_To_List:hover, 
+.prompt_Treats_Button_Remove_From_Array:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
 
+
+/* universal class */
 .hide {
     display: none;
 }
 
-.test {
-    width: 20rem;
-    height: 20rem;
-    position: relative;
+
+
+
+
+
+
+
+/* didn't make it in.
+
+.second_section {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    height: auto;
+    width: auto;
+}
+
+.food_lists {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
     align-items: center;
-    left: 3vw;
+    width: 40rem;
+    height: 40rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-.animated_cross {
-    width: 15rem;
-    height: 15rem;
-    opacity: 0;
-    transition: opacity 230ms ease-in-out;
-}
-
-.animated_cross:hover{
-    opacity: 1;
-}
-
-.cross {
-    height: 25vh;
-    width: 3vw;
-    background: green;
-    position: relative;
-
-}
-
-.cross::after{
-    content: "";
-    position: absolute;
-    height: 25vh;
-    width: 3vw;
-    background: green;
-    rotate: 90deg;
-    
-}
+*/
